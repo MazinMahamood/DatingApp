@@ -35,6 +35,7 @@ import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { AlertifyService } from './_service/alertify.service';
 import { UserService } from './_service/user.service';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
+import { ListsResover } from './_resolver/lists.resolver';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -87,6 +88,7 @@ export function tokenGetter() {
     MemberListResover,
     MemberEditResover,
     PreventUnsavedChanges,
+    ListsResover
   ],
   bootstrap: [AppComponent],
 })
