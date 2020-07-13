@@ -36,6 +36,8 @@ import { AlertifyService } from './_service/alertify.service';
 import { UserService } from './_service/user.service';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { ListsResover } from './_resolver/lists.resolver';
+import { MessagesResover } from './_resolver/messages.resolver';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -53,7 +55,8 @@ export function tokenGetter() {
     MemberCardComponent,
     MemberDetailComponent,
     MemberEditComponent,
-    PhotoEditorComponent
+    PhotoEditorComponent,
+    MemberMessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -88,7 +91,8 @@ export function tokenGetter() {
     MemberListResover,
     MemberEditResover,
     PreventUnsavedChanges,
-    ListsResover
+    ListsResover,
+    MessagesResover
   ],
   bootstrap: [AppComponent],
 })
